@@ -29,7 +29,12 @@ def bracket_balance(brackets):
                 left_stack.pop()
             else:
                 return False
-    return True
+    #need to check stack is empty to ensure all lefts had pair
+    #empty stack returns False, so inverse with not
+    if not left_stack:
+        return True
+    else:
+        return False
             
 
 print(bracket_balance(test1))
